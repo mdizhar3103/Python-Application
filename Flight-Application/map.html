@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fc8b58d16b904bb1a4fb502441230485 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_fc8b58d16b904bb1a4fb502441230485" ></div>
+        
+</body>
+<script>    
+    
+            var map_fc8b58d16b904bb1a4fb502441230485 = L.map(
+                "map_fc8b58d16b904bb1a4fb502441230485",
+                {
+                    center: [38.3790494939, 27.70983847815],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fa2dee35220844c4a6b415a2fac16760 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fc8b58d16b904bb1a4fb502441230485);
+        
+    
+            map_fc8b58d16b904bb1a4fb502441230485.fitBounds(
+                [[51.505299, 0.055278], [25.2527999878, 55.3643989563]],
+                {}
+            );
+        
+    
+            var marker_bd9481e9f7a24aea92272acf3cbd5eae = L.marker(
+                [51.505299, 0.055278],
+                {}
+            ).addTo(map_fc8b58d16b904bb1a4fb502441230485);
+        
+    
+            var div_icon_4bae4c3b6c0a4ca5b84b12c236866c9f = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"\n                  font-size: 12pt;\n                  font-family: serif;\n                  color: black; \n                  text-align: center;\n                  background: rgba(255, 255, 255, 0.7);\n                  \"\u003e\n                  LCY (London City Airport)\n                  \u003c/div\u003e", "iconSize": [180, 20]});
+            marker_bd9481e9f7a24aea92272acf3cbd5eae.setIcon(div_icon_4bae4c3b6c0a4ca5b84b12c236866c9f);
+        
+    
+            var marker_6e25f610564b4459872b8051c0d47341 = L.marker(
+                [51.505299, 0.055278],
+                {}
+            ).addTo(map_fc8b58d16b904bb1a4fb502441230485);
+        
+    
+            var icon_98970a9452c74c0abff508703ebdf9b6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "plane", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6e25f610564b4459872b8051c0d47341.setIcon(icon_98970a9452c74c0abff508703ebdf9b6);
+        
+    
+        var popup_d6dcf2c888764a7da71add8274d7c82c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba6e7120f07f4ec7ae1c2de75d4ca77f = $(`<div id="html_ba6e7120f07f4ec7ae1c2de75d4ca77f" style="width: 100.0%; height: 100.0%;">Flight Origin</div>`)[0];
+            popup_d6dcf2c888764a7da71add8274d7c82c.setContent(html_ba6e7120f07f4ec7ae1c2de75d4ca77f);
+        
+
+        marker_6e25f610564b4459872b8051c0d47341.bindPopup(popup_d6dcf2c888764a7da71add8274d7c82c)
+        ;
+
+        
+    
+    
+            var marker_156e8cbe672a475bb04c34f0af948abc = L.marker(
+                [25.2527999878, 55.3643989563],
+                {}
+            ).addTo(map_fc8b58d16b904bb1a4fb502441230485);
+        
+    
+            var div_icon_898234ff1dac466980f0f8c3d162e560 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"\n                  font-size: 12pt;\n                  font-family: serif;\n                  color: black; \n                  text-align: center;\n                  background: rgba(255, 255, 255, 0.7);\"\u003e\n                  DXB (Dubai International Airport)\n                  \u003c/div\u003e", "iconSize": [180, 20]});
+            marker_156e8cbe672a475bb04c34f0af948abc.setIcon(div_icon_898234ff1dac466980f0f8c3d162e560);
+        
+    
+            var marker_ae7d3208f7df44e6a6005603437ecb41 = L.marker(
+                [25.2527999878, 55.3643989563],
+                {}
+            ).addTo(map_fc8b58d16b904bb1a4fb502441230485);
+        
+    
+            var icon_a70d601e03f846a8b6f315ebc2f214cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-90", "icon": "plane", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ae7d3208f7df44e6a6005603437ecb41.setIcon(icon_a70d601e03f846a8b6f315ebc2f214cb);
+        
+    
+        var popup_e84cb7a662f74d1191fcfacd367ab155 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e256ad40d27f474fb5b5c16638fc37ae = $(`<div id="html_e256ad40d27f474fb5b5c16638fc37ae" style="width: 100.0%; height: 100.0%;">Flight Origin</div>`)[0];
+            popup_e84cb7a662f74d1191fcfacd367ab155.setContent(html_e256ad40d27f474fb5b5c16638fc37ae);
+        
+
+        marker_ae7d3208f7df44e6a6005603437ecb41.bindPopup(popup_e84cb7a662f74d1191fcfacd367ab155)
+        ;
+
+        
+    
+    
+            var poly_line_b06286153b1c4019a67bb039371248a1 = L.polyline(
+                [[51.505299, 0.05527800000000127], [51.24012224230101, 12.938412053368403], [50.974945484602024, 22.8206822317253], [50.70976872690303, 30.401078699967496], [50.44459196920404, 36.2157760902072], [50.17941521150505, 40.6760580664482], [49.914238453806064, 44.09740813377476], [49.64906169610707, 46.72182433560893], [49.38388493840808, 48.7349361963988], [49.11870818070909, 50.27913462087912], [48.853531423010104, 51.46364345052354], [48.588354665311115, 52.37224505590193], [48.32317790761212, 53.069206409532384], [48.05800114991313, 53.603824800672115], [47.79282439221414, 54.013914718364155], [47.527647634515155, 54.32848253604461], [47.26247087681616, 54.56977818280703], [46.99729411911717, 54.75486891960209], [46.73211736141818, 54.89684653630179], [46.466940603719195, 55.005753356776786], [46.2017638460202, 55.08929254993751], [45.93658708832121, 55.15337298827467], [45.67141033062222, 55.20252719269201], [45.406233572923234, 55.240231925596454], [45.141056815224246, 55.26915410835268], [44.87588005752525, 55.291339457271725], [44.61070329982626, 55.30835718068521], [44.345526542127274, 55.32141097178108], [44.080349784428286, 55.33142414791716], [43.81517302672929, 55.339104958464524], [43.5499962690303, 55.34499668051783], [43.284819511331314, 55.3495160458295], [43.019642753632326, 55.352982716971766], [42.75446599593333, 55.35564189762652], [42.48928923823434, 55.35768167626846], [42.224112480535354, 55.359246329990164], [41.958935722836365, 55.36044652947185], [41.69375896513738, 55.36136716691122], [41.42858220743838, 55.36207336059628], [41.16340544973939, 55.36261506083513], [40.898228692040405, 55.36303058302825], [40.63305193434142, 55.36334931778335], [40.36787517664243, 55.363593809764275], [40.10269841894343, 55.36378135231424], [39.837521661244445, 55.36392521064413], [39.572344903545456, 55.364035560103936], [39.30716814584646, 55.36412020590296], [39.04199138814747, 55.36418513518584], [38.776814630448484, 55.36423494051375], [38.511637872749496, 55.36427314470417], [38.24646111505051, 55.36430245000599], [37.98128435735151, 55.36432492923417], [37.716107599652524, 55.364342172383665], [37.450930841953536, 55.36435539909242], [37.18575408425455, 55.364365544908566], [36.92057732655556, 55.36437332746333], [36.655400568856564, 55.36437929723036], [36.390223811157576, 55.36438387646165], [36.12504705345859, 55.36438738905422], [35.8598702957596, 55.36439008345984], [35.59469353806061, 55.3643921502585], [35.329516780361615, 55.36439373563848], [35.06434002266263, 55.364394951736465], [34.79916326496364, 55.36439588456917], [34.53398650726464, 55.36439660011748], [34.26880974956566, 55.36439714899338], [34.00363299186667, 55.364397570019804], [33.73845623416768, 55.3643978929767], [33.47327947646869, 55.36439814070735], [33.208102718769695, 55.3643983307342], [32.942925961070706, 55.36439847649815], [32.67774920337172, 55.364398588309356], [32.41257244567272, 55.364398674076426], [32.14739568797374, 55.36439873986579], [31.882218930274746, 55.364398790330874], [31.617042172575758, 55.364398829041136], [31.35186541487677, 55.36439885873463], [31.086688657177778, 55.36439888151163], [30.82151189947879, 55.36439889898319], [30.556335141779797, 55.36439891238511], [30.29115838408081, 55.36439892266532], [30.025981626381817, 55.36439893055097], [29.76080486868283, 55.36439893659981], [29.495628110983837, 55.364398941239706], [29.23045135328485, 55.36439894479883], [28.965274595585857, 55.364398947528926], [28.70009783788687, 55.3643989496231], [28.43492108018788, 55.36439895122948], [28.16974432248889, 55.36439895246169], [27.9045675647899, 55.36439895340688], [27.63939080709091, 55.36439895413191], [27.37421404939192, 55.364398954688056], [27.10903729169293, 55.36439895511466], [26.84386053399394, 55.36439895544189], [26.578683776294948, 55.364398955692906], [26.31350701859596, 55.36439895588545], [26.048330260896968, 55.36439895603314], [25.78315350319798, 55.36439895614644], [25.51797674549899, 55.36439895623334], [25.2527999878, 55.3643989563]],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": true, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_fc8b58d16b904bb1a4fb502441230485);
+        
+</script>
