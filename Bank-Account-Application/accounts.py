@@ -129,6 +129,7 @@ class Account:
         accepted = False
         if self.balance - value < 0:
             txncode = Account._txnCode.get('aborted')
+            value = "TXN ABRT"
             print("Transaction Aborted insufficient withdrawl amount")
         else:
             accepted = True
